@@ -8,6 +8,7 @@ import DoNotCross from "../../components/DoNotCross";
 import ProjectBox from "../../components/ProjectBox";
 import SendMail from "../../components/SendMail";
 import { Link, Element } from "react-scroll";
+import Image from "next/image";
 
 function Main() {
   return (
@@ -35,7 +36,13 @@ function Main() {
           </Link>
         </div>
         <div className="hidden flex-col items-center justify w-1/2 my-4 text-center xl:flex">
-          <img src="/images/svg/viseur.svg" alt="Viseur" className="w-2/3" />
+          <Image
+            width={512}
+            height={512}
+            src="/images/svg/viseur.svg"
+            alt="Viseur"
+            className="w-2/3"
+          />
         </div>
       </div>
 
@@ -49,34 +56,44 @@ function Main() {
         <div className="flex flex-col items-center justify-center lg:flex-row my-4 md:my-0">
           <div className="flex flex-col items-center p-4 md:p-12 w-full md:w-1/2 ">
             <div className="relative">
-              <img
+              <Image
+                width={512}
+                height={512}
                 src="/images/photocvmodif.jpg"
                 alt="Picture of me"
                 className="h-60 w-60 lg:h-80 lg:w-80"
               />
               <div>
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/svg/scotchhg.svg"
                   alt="Scotch"
                   className="w-12 absolute -top-5 -left-5"
                 />
               </div>
               <div>
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/svg/scotchhd.svg"
                   alt="Scotch"
                   className="w-12 absolute -top-5 -right-5"
                 />
               </div>
               <div>
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/svg/scotchbg.svg"
                   alt="Scotch"
                   className="w-12 absolute -bottom-5 -left-5"
                 />
               </div>
               <div>
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/svg/scotchbd.svg"
                   alt="Scotch"
                   className="w-12 absolute -bottom-5 -right-5"
@@ -107,7 +124,9 @@ function Main() {
               </span>
               <p className="ml-4 text-white text-base sm:text-lg font-montserrat font-light flex items-center">
                 Paris, France
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/drapeaufrance.svg"
                   alt="Drapeau France"
                   className="w-4 ml-4 border border-white"
@@ -115,10 +134,11 @@ function Main() {
               </p>
             </div>
             <p className="text-white font-montserrat text-base sm:text-lg text-left my-3 w-full">
-              Currently in my second year at IIM Digital School, I'm a front-end
-              web developer. I create websites that are both practical and
-              functional, with a modern, intuitive design. I'm currently looking
-              for a work-study position for the 2025-2026 academic year.{" "}
+              Currently in my second year at IIM Digital School, I&apos;m a
+              front-end web developer. I create websites that are both practical
+              and functional, with a modern, intuitive design. I&apos;m
+              currently looking for a work-study position for the 2025-2026
+              academic year.{" "}
             </p>
           </div>
         </div>
