@@ -3,12 +3,24 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Button from "./Button";
+import Image from "next/image";
+import { SingleValue } from "react-select";
 
 // Import dynamique pour éviter les erreurs SSR
 const Select = dynamic(() => import("react-select"), { ssr: false });
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
 });
+
+interface Country {
+  cca2: string;
+  name: {
+    common: string;
+  };
+  flags: {
+    png: string;
+  };
+}
 
 type CountryOption = {
   value: string;
@@ -18,14 +30,14 @@ type CountryOption = {
 
 const fetchCountries = async (): Promise<CountryOption[]> => {
   const response = await fetch("https://restcountries.com/v3.1/all");
-  const data = await response.json();
+  const data: Country[] = await response.json();
 
   return data
-    .map((country: any) => ({
+    .map((country) => ({
       value: country.cca2,
       label: (
         <div className="flex items-center">
-          <img
+          <Image
             src={country.flags.png}
             alt={country.name.common}
             className="w-6 h-4 mr-2"
@@ -64,11 +76,12 @@ function SendMail() {
     }
   }, []);
 
-  const handleCountryChange = (selectedOption: CountryOption | any) => {
-    setSelectedCountry(selectedOption);
+  const handleCountryChange = (newValue: unknown) => {
+    const typedValue = newValue as SingleValue<CountryOption>;
+    setSelectedCountry(typedValue);
     setFormData({
       ...formData,
-      country: selectedOption ? selectedOption.name : "",
+      country: typedValue ? typedValue.name : "",
     });
   };
 
@@ -181,7 +194,7 @@ function SendMail() {
             <div className="my-4">
               <Select
                 options={countries}
-                onChange={handleCountryChange} // OnChange fonctionne sans typage générique
+                onChange={handleCountryChange}
                 value={selectedCountry}
                 placeholder="Select a country"
                 isClearable
@@ -200,7 +213,9 @@ function SendMail() {
             <div className="flex flex-col items-center justify-center">
               <span className="font-tt_travels">Captcha</span>
               <div className="border-2 border-gray-600 w-28 h-36 p-4 my-2">
-                <img
+                <Image
+                  width={512}
+                  height={512}
                   src="/images/fingerprint.png"
                   alt="Fingerprint"
                   className="h-full m-auto -rotate-12"

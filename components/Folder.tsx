@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 
 function Folder() {
   useEffect(() => {
@@ -17,7 +18,6 @@ function Folder() {
 
     function handlePageClick(e: Event) {
       const page = e.currentTarget as HTMLElement;
-      const pageNum = parseInt(page.dataset.pageNum || "0", 10);
 
       // Si la page est déjà retournée, annule l'effet
       if (page.classList.contains("flipped")) {
@@ -56,10 +56,10 @@ function Folder() {
         className="pages mx-auto w-full flex justify-center items-center"
       >
         <div className="page">
-          <img src="/images/svg/dossierconfidential.svg" alt="Folder" />
+          <Image src="/images/svg/dossierconfidential.svg" alt="Folder" />
         </div>
         <div className="page">
-          <img
+          <Image
             src="/images/svg/dossier.svg"
             alt="Folder"
             className="relative"
@@ -71,7 +71,7 @@ function Folder() {
                   <p className="uppercase font-montserrat text-xs">
                     Government of
                   </p>
-                  <img
+                  <Image
                     src="/images/blackpaint.png"
                     alt=""
                     className="w-[72px] h-10 mx-1"
@@ -87,13 +87,13 @@ function Folder() {
                 </div>
               </div>
               <div className="flex items-center justify-end w-1/2">
-                <img
+                <Image
                   src="/images/neuillystamp.png"
                   alt="Stamp"
                   className="h-24"
                 />
               </div>
-              <img
+              <Image
                 src="/images/svg/topsecret.svg"
                 alt="Top Secret"
                 className="absolute left-32 top-6 w-52"
@@ -127,7 +127,7 @@ function Folder() {
             <h4 className="font-montserrat font-bold mt-4 mb-1 uppercase">
               Site Preview
             </h4>
-            <img
+            <Image
               src="/images/screenblogaja.png"
               alt=""
               className="w-full h-auto grayscale border border-black "
@@ -136,7 +136,7 @@ function Folder() {
         </div>
 
         <div className="page">
-          <img
+          <Image
             src="/images/svg/dossier.svg"
             alt="Folder"
             className="relative"
@@ -148,7 +148,7 @@ function Folder() {
                   <p className="uppercase font-montserrat text-xs">
                     Government of
                   </p>
-                  <img
+                  <Image
                     src="/images/blackpaint.png"
                     alt=""
                     className="w-[72px] h-10 mx-1"
@@ -164,13 +164,13 @@ function Folder() {
                 </div>
               </div>
               <div className="flex items-center justify-end w-1/2">
-                <img
+                <Image
                   src="/images/neuillystamp.png"
                   alt="Stamp"
                   className="h-24"
                 />
               </div>
-              <img
+              <Image
                 src="/images/svg/topsecret.svg"
                 alt="Top Secret"
                 className="absolute left-32 top-6 w-52"
@@ -204,7 +204,7 @@ function Folder() {
             <h4 className="font-montserrat font-bold mt-4 mb-1 uppercase">
               Site Preview
             </h4>
-            <img
+            <Image
               src="/images/screenblogaja.png"
               alt=""
               className="w-full h-auto grayscale border border-black "
@@ -212,7 +212,7 @@ function Folder() {
           </div>
         </div>
         <div className="page">
-          <img
+          <Image
             src="/images/svg/dossier.svg"
             alt="Folder"
             className="relative"
@@ -224,7 +224,7 @@ function Folder() {
                 confidential.
               </h3>
               <p className="font-montserrat font-extrabold uppercase">
-                Don't tell anyone !
+                Don&apos;t tell anyone !
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 interface ProjectBoxProps {
   title: string;
@@ -28,12 +29,16 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
       <div className="flex flex-col items-center xl:flex-row mt-4">
         <div className="w-full xl:w-1/2 relative">
           <Link href={link}>
-            <img
+            <Image
+              width={512}
+              height={512}
               src={img}
               alt={title}
               className=" w-full h-auto border border-gray-600"
             />
-            <img
+            <Image
+              width={512}
+              height={512}
               src="/images/svg/topsecret.svg"
               alt="Top Secret"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 sm:w-72 md:w-96 xl:w-72"

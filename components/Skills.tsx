@@ -1,10 +1,13 @@
 import React from "react";
+import Image from "next/image";
 
 function Skills() {
   return (
     <div className="text-center grid grid-cols-2 place-items-center mx-auto w-[250px] sm:w-[400px] lg:w-auto lg:flex lg:items-center lg:justify-center gap-4 mt-8 mb-24">
       <div className="group relative bg-white w-28 h-28 p-2 lg:w-40 lg:h-40 lg:p-4 rounded-xl grayscale-[100%] flex items-center justify-center transition-all hover:grayscale-0">
-        <img
+        <Image
+          width={512}
+          height={512}
           src="/images/svg/logos/logohtml.svg"
           alt="Logo HTML"
           className="object-contain h-auto w-20 lg:w-32 "
@@ -17,7 +20,9 @@ function Skills() {
         </h3>
       </div>
       <div className="group bg-white w-28 h-28 p-2 lg:w-40 lg:h-40 lg:p-4 rounded-xl grayscale-[100%] flex items-center justify-center transition-all hover:grayscale-0">
-        <img
+        <Image
+          width={512}
+          height={512}
           src="/images/svg/logos/logocss.svg"
           alt="Logo CSS"
           className="object-contain w-auto h-20 lg:h-32"
@@ -30,7 +35,9 @@ function Skills() {
         </h3>
       </div>
       <div className="group bg-white w-28 h-28 p-2 lg:w-40 lg:h-40 lg:p-4 rounded-xl grayscale-[100%] flex items-center justify-center transition-all hover:grayscale-0">
-        <img
+        <Image
+          width={512}
+          height={512}
           src="/images/svg/logos/logojavascript.svg"
           alt="Logo Javascript"
           className="object-contain h-auto w-20 lg:w-32"
@@ -43,7 +50,9 @@ function Skills() {
         </h3>
       </div>
       <div className="group bg-white w-28 h-28 p-2 lg:w-40 lg:h-40 lg:p-4 rounded-xl grayscale-[100%] flex items-center justify-center transition-all hover:grayscale-0">
-        <img
+        <Image
+          width={512}
+          height={512}
           src="/images/svg/logos/logoreact.svg"
           alt="Logo React"
           className="object-contain h-auto w-20 lg:w-32"
@@ -56,7 +65,9 @@ function Skills() {
         </h3>
       </div>
       <div className="group bg-white w-28 h-28 p-2 lg:w-40 lg:h-40 lg:p-4 rounded-xl grayscale-[100%] flex items-center justify-center transition-all hover:grayscale-0">
-        <img
+        <Image
+          width={512}
+          height={512}
           src="/images/svg/logos/logonextjs.svg"
           alt="Logo NextJS"
           className="object-contain h-auto w-20 lg:w-32"
