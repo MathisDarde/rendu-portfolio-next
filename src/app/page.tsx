@@ -59,7 +59,7 @@ function Main() {
               <Image
                 width={512}
                 height={512}
-                src="/images/photocvmodif.jpg"
+                src="/images/photodemoi.jpg"
                 alt="Picture of me"
                 className="h-60 w-60 lg:h-80 lg:w-80"
               />
