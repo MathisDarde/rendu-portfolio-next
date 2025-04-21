@@ -11,8 +11,6 @@ Tailwind CSS — Framework CSS pour un design flexible et rapide
 
 TypeScript — Pour des types sécurisés et un code robuste
 
-Framer Motion — Animation fluide des éléments de l'interface
-
 Vercel — Déploiement du site en production
 
 ## 🌟 Fonctionnalités
